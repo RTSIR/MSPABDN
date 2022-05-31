@@ -12,7 +12,7 @@ from utils import utils_image as util
 #ParsingArguments
 parser=argparse.ArgumentParser()
 parser.add_argument('--dataPath',dest='dataPath',type=str,default='./Testing_data/BSD68',help='testDataPath')
-parser.add_argument('--weightsPath',dest='weightsPath',type=str,default='./Pretrained_models/MDFBGDN_Gray.h5',help='pathOfTrainedCNN')
+parser.add_argument('--weightsPath',dest='weightsPath',type=str,default='./Pretrained_models/MSPABDN_Gray.h5',help='pathOfTrainedCNN')
 args=parser.parse_args()
 #createModel, loadWeights
 def custom_loss(y_true,y_pred): #this is required for loading a keras-model created with custom-loss
@@ -47,7 +47,7 @@ for i in range(0,lenth):
     z=(predClean)
     cv2.imwrite("./Test_Results/Gray/"+str(i+1)+"_Original.png",255.*img1)
     cv2.imwrite("./Test_Results/Gray/"+str(i+1)+"_Noisy.png",255.*f)
-    cv2.imwrite("./Test_Results/Gray/"+str(i+1)+"_MDFBGDN_Gray.png",255.*z)
+    cv2.imwrite("./Test_Results/Gray/"+str(i+1)+"_MSPABDN_Gray.png",255.*z)
     psnr_val[i]=util.calculate_psnr(255.*z,255.*img1)
     ssim_val[i]=util.calculate_ssim(255.*z,255.*img1)
     print('PSNR of image '+str(i+1)+' is ',psnr_val[i])
@@ -56,5 +56,5 @@ for i in range(0,lenth):
     sumSSIM=sumSSIM+ssim_val[i]
 avgPSNR=sumPSNR/lenth
 avgSSIM=sumSSIM/lenth
-print('avgPSNR on Set5 dataset = ',avgPSNR)
-print('avgSSIM on Set5 dataset = ',avgSSIM)
+print('avgPSNR on dataset = ',avgPSNR)
+print('avgSSIM on dataset = ',avgSSIM)
