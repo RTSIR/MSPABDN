@@ -20,14 +20,14 @@ Image wise PSNR & SSIM as well as Average PSNR & Average SSIM for the whole imag
 
 # Train MSPABDN denoising network
 
-To train the MSPABDN denoising network, first download the [BSD400 dataset](https://github.com/smartboy110/denoising-datasets/tree/main/BSD400) and save this dataset inside the main folder of this project. Then generate the training data using:
+To train the MSPABDN color denoising network, first download the [CBSD432 dataset](https://github.com/Magauiya/Extended_SURE/tree/master/Dataset/CBSD432) and save this dataset inside the main folder of this project. Then generate the training data using:
 
-python Generate_Patches_Gray.py
+python Generate_Patches_Color.py
 
 This will save the training patch 'img_clean_pats.npy' in the folder 'trainingPatch/'
 
 Then run the MSPABDN model file using:
 
-python MSPABDN_Gray.py
+python MSPABDN_Color.py
 
-This will save the 'MSPABDN_Gray.h5' file in the folder 'Pretrained_models/'.
+This will save the 'MSPABDN_Color.h5' file in the folder 'Pretrained_models/'.
