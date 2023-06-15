@@ -12,8 +12,8 @@ import numpy as np
 DATA_AUG_TIMES = 1  # transform a sample to a different sample for DATA_AUG_TIMES times
 
 parser = argparse.ArgumentParser(description='')
-parser.add_argument('--src_dir', dest='src_dir', default='./data/CBSD432', help='dir of data')
-parser.add_argument('--save_dir', dest='save_dir', default='./data', help='dir of patches')
+parser.add_argument('--src_dir', dest='src_dir', default='./CBSD432', help='dir of data')
+parser.add_argument('--save_dir', dest='save_dir', default='./trainingPatch', help='dir of patches')
 parser.add_argument('--patch_size', dest='pat_size', type=int, default=30, help='patch size')
 parser.add_argument('--stride', dest='stride', type=int, default=10, help='stride')
 parser.add_argument('--step', dest='step', type=int, default=0, help='step')
