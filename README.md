@@ -18,7 +18,7 @@ The resultant images will be stored in 'Test_Results/Color/'
 
 Image wise PSNR & SSIM as well as Average PSNR & Average SSIM for the whole image database is also displayed in the console as output.
 
-# Train MSPABDN denoising network
+# Train MSPABDN color denoising network
 
 To train the MSPABDN color denoising network, first download the [CBSD432 dataset](https://github.com/Magauiya/Extended_SURE/tree/master/Dataset/CBSD432) and save this dataset inside the main folder of this project. Then generate the training data using:
 
