@@ -46,3 +46,13 @@ Then run the MSPABDN model file using:
 python MSPABDN_Color.py
 
 This will save the 'MSPABDN_Color.h5' file in the folder 'Pretrained_models/'.
+
+# Citation
+@inproceedings{thakur2022blind,
+  title={Blind Gaussian Deep Denoiser Network using Multi-Scale Pixel Attention},
+  author={Thakur, Ramesh Kumar and Maji, Suman Kumar},
+  booktitle={2022 IEEE International Conference on Visual Communications and Image Processing (VCIP)},
+  pages={1--5},
+  year={2022},
+  organization={IEEE}
+}
